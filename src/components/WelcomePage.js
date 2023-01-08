@@ -175,7 +175,6 @@ function WelcomePage(props) {
       const len = 20;
       Array.from({length:len}).forEach((_, i) => {
         setTimeout(() => {
-          console.log({ i, j })
           const str =
             i === len - 1
               ? designations[j % designations.length]
