@@ -173,17 +173,18 @@ function WelcomePage(props) {
     let j = 0;
     const interval = setInterval(() => {
       const len = 20;
-      for (let i = 0; i < len; i++) {
+      Array.from({length:len}).forEach((_, i) => {
         setTimeout(() => {
+          console.log({ i, j })
           const str =
             i === len - 1
               ? designations[j % designations.length]
               : getTransitionString(designations, j);
           setDesignation(str);
         }, i * 20);
-      }
+      })
       j++;
-    }, 2000);
+    }, 1000);
     return () => clearInterval(interval);
   });
 
