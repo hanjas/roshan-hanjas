@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'ProximaNova';
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .App {
+  width: 1600px;
+  margin: 0 auto;
+} */
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes counter-rotate {
+  from { transform: rotate(360deg) }
+  to { transform: rotate(0deg) }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes flower {
+  from { opacity: 0; transform: scale(.8); }
+  to   { opacity: 1; transform: scale(1); }
 }
-
-.App-link {
-  color: #61dafb;
+@keyframes circle {
+  0% { transform: rotate(0deg) translate(-255px) rotate(0deg); }
+  100% { transform: rotate(360deg) translate(-255px) rotate(-360deg); }
 }
-
-@keyframes App-logo-spin {
+@keyframes slide-down {
+  from { height: 100%; }
+  to { height: 50%; }
+}
+@keyframes slide-in {
+  from { flex: 10; }
+  to { flex: 2; }
+}
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes text-clip {
   from {
-    transform: rotate(0deg);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
   to {
-    transform: rotate(360deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }

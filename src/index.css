@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(./lib/fonts/proxima/ProximaNovaRegular.otf);
+}
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url(./lib/fonts/proxima/ProximaNovaAltLight.otf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./lib/fonts/montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Normal;
+  src: url(./lib/fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: PalanquinDark;
+  src: url(./lib/fonts/palanquin/PalanquinDark-Regular.ttf);
+}
+
+@font-face {
+  font-family: Kanit;
+  src: url(./lib/fonts/kanit/Kanit-Light.ttf);
+}
