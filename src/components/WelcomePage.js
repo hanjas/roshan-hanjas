@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import icons from '../lib/utils/icons'
 import profilePic from '../public/profile-pic.svg';
 import assets from '../lib/assets'
@@ -10,30 +10,55 @@ const Main = styled.div`
 `;
 
 const LeftSection = styled.div`
-  // height: 100%;
+  height: 100vh;
   background-image: linear-gradient(120deg, rgba(240, 147, 251, 1) 0%, rgba(245, 87, 108, 1) 100%);
-  flex: 2;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+
+  @media (min-width: 400px) {
+    flex: 2;
+  }
 `;
 const LContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 25px;
+`;
+const LProfile = styled.div`
+  height: 250px;
+  width: 250px;
+  background-image: url(${profilePic});
+  background-size: cover;
+  border-radius: 150px;
+  transform: scale(.8);
+  margin: 0 auto;
+
+  @media (min-width: 400px) {
+    display: none;
+  }
 `;
 const Name = styled.div`
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 600;
   font-family: 'Montserrat';
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+
+  @media (min-width: 400px) {
+    font-size: 80px;
+  }
 `;
 const Title = styled.div`
-  font-size: 25px;
+  font-size: 18px;
+  line-height: 40px;
   font-family: 'Montserrat';
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+
+  @media (min-width: 400px) {
+    font-size: 25px;
+  }
 `;
 const Links = styled.div`
   width: 200px;
@@ -55,6 +80,7 @@ const Links = styled.div`
 
 
 const RightSection = styled.div`
+  height: 100vh;
   flex: 3; 
   position: relative;
 `;
@@ -74,8 +100,11 @@ const Profile = styled.div`
   background-image: url(${profilePic});
   background-size: cover;
   border-radius: 150px;
-  animation: appear 500ms 1.7s both;
   transform: scale(.8);
+
+  @media (min-width: 400px) {
+    animation: appear 500ms 1.7s both;
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -191,6 +220,7 @@ function WelcomePage(props) {
     <Main>
       <LeftSection>
         <LContent>
+          <LProfile />
           <div>
             <Name>ROSHIN</Name>
             <Name>HANJAS</Name>
