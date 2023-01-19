@@ -174,12 +174,12 @@ const Icons = styled.div`
 
 function WelcomePage(props) {
   const [ designation, setDesignation ] = useState("Fullstack Engineer")
-  const designations = ["Fullstack Engineer", "Backend Engineer", "Web Developer", "superman", "batman"]
+  const designations = ["Fullstack Engineer", "Fullstack Engineer", "Fullstack Engineer", "Fullstack Engineer", "Fullstack Engineer"]
   const ICONS_CONTAINER_WIDTH = 500;
 
 
   const getRandomString = (length) => {
-    var randomChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&*@?+!";
+    var randomChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var result = "";
     for (var i = 0; i < length; i++) {
       result += randomChars.charAt(
@@ -189,14 +189,14 @@ function WelcomePage(props) {
     return result;
   }
 
-  const getTransitionString = (labels, idx) => {
-    const from = labels[idx % labels.length];
-    const to = labels[(idx + 1) % labels.length];
-    const min = Math.min(from.length, to.length);
-    const max = Math.max(from.length, to.length);
-    const length = min + parseInt(Math.random() * (max - min));
-    return getRandomString(length);
-  }
+  // const getTransitionString = (labels, idx) => {
+  //   const from = labels[idx % labels.length];
+  //   const to = labels[(idx + 1) % labels.length];
+  //   const min = Math.min(from.length, to.length);
+  //   const max = Math.max(from.length, to.length);
+  //   const length = min + parseInt(Math.random() * (max - min));
+  //   return getRandomString(10);
+  // }
   
   useEffect(() => {
     let j = 0;
@@ -207,7 +207,7 @@ function WelcomePage(props) {
           const str =
             i === len - 1
               ? designations[j % designations.length]
-              : getTransitionString(designations, j);
+              : getRandomString(10);
           setDesignation(str);
         }, i * 20);
       })
