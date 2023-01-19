@@ -19,7 +19,7 @@ const HeadingBG = styled.div`
   top: 10px;
   margin: 0 auto;
   padding: 10px;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 700;
   font-family: 'Montserrat';
   color: #f1f1f1;
@@ -31,7 +31,7 @@ const HeadingBG = styled.div`
 `;
 const HeadingText = styled.div`
   position: absolute;
-  top: 55px;
+  top: 45px;
   margin: 0 auto;
   font-size: 40px;
   font-family: 'Montserrat';
@@ -44,7 +44,7 @@ const HeadingText = styled.div`
 
 const Body = styled.div`
   position: relative;
-  top: 180px;
+  top: 145px;
   display: flex;
   justify-content: center;
   align-items: center;
