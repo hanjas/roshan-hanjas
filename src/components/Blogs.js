@@ -174,7 +174,7 @@ function Blogs(props) {
   const cardItem = (item) => {
     return (
       <Card>
-        <CImg><img src={item.img}></img></CImg>
+        <CImg><img src={item.img} alt={item.id}></img></CImg>
         <CBody>
           <CHeader>{item.title}</CHeader>
           <p>{item.content}</p>
