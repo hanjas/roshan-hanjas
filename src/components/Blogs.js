@@ -74,7 +74,7 @@ const Cards = styled.div`
 
 const Card = styled.div`
 
-  width: 90%;
+  width: 100%;
   margin: 0 1em 2em;
   background: #eee;
   border-radius: 10px;
