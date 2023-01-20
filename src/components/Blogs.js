@@ -62,7 +62,7 @@ const Content = styled.div`
 `;
 
 const Cards = styled.div`
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -74,7 +74,7 @@ const Cards = styled.div`
 
 const Card = styled.div`
 
-  width: 400px;
+  width: 90%;
   margin: 0 1em 2em;
   background: #eee;
   border-radius: 10px;
