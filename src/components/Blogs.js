@@ -3,6 +3,8 @@ import styled from 'styled-components/macro'
 
 import medium from '../public/medium.svg'
 
+const mobileWidth = '450px'
+
 const Main = styled.div`
   min-height: 100vh;
   position: relative;
@@ -24,7 +26,7 @@ const HeadingBG = styled.div`
   font-family: 'Montserrat';
   color: #f1f1f1;
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     font-size: 300px;
     top: 0;
   }
@@ -36,7 +38,7 @@ const HeadingText = styled.div`
   font-size: 40px;
   font-family: 'Montserrat';
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     font-size: 60px;
     top: 160px;
   }
@@ -49,7 +51,7 @@ const Body = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     top: 380px;
   }
 `;
@@ -60,12 +62,12 @@ const Content = styled.div`
 `;
 
 const Cards = styled.div`
-  width: 350px;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     width: 1296px;
   }
 `;

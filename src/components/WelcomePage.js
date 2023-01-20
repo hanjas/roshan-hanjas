@@ -4,6 +4,8 @@ import icons from '../lib/utils/icons'
 import profilePic from '../public/profile-pic.svg';
 import assets from '../lib/assets'
 
+const mobileWidth = '450px'
+
 const Main = styled.div`
   height: 100vh;
   display: flex;
@@ -19,7 +21,7 @@ const LeftSection = styled.div`
   align-items: center;
   color: white;
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     flex: 2;
   }
 `;
@@ -36,7 +38,7 @@ const LProfile = styled.div`
   transform: scale(.8);
   margin: 0 auto;
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     display: none;
   }
 `;
@@ -46,7 +48,7 @@ const Name = styled.div`
   font-family: 'Montserrat';
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     font-size: 80px;
   }
 `;
@@ -56,7 +58,7 @@ const Title = styled.div`
   font-family: 'Montserrat';
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     font-size: 25px;
   }
 `;
@@ -102,7 +104,7 @@ const Profile = styled.div`
   border-radius: 150px;
   transform: scale(.8);
 
-  @media (min-width: 400px) {
+  @media (min-width: ${mobileWidth}) {
     animation: appear 500ms 1.7s both;
   }
 `;
