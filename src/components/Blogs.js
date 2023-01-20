@@ -82,6 +82,10 @@ const Card = styled.div`
   * {
     font-family: 'Poppins'
   }
+
+  @media (min-width: ${mobileWidth}) {
+    width: 400px;
+  }
 `;
 
 const CImg = styled.div`
