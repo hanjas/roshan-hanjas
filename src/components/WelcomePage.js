@@ -38,7 +38,7 @@ const LProfile = styled.div`
   border-radius: 150px;
   // transform: scale(.8);
   margin: 20px auto;
-  animation: appear 300ms 1.7s both;
+  animation: flower 900ms 2s both;
 
   @media (min-width: ${mobileWidth}) {
     display: none;
