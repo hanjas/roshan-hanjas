@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components/macro'
 import icons from '../lib/utils/icons'
 import profilePic from '../public/profile-pic.svg';
@@ -56,6 +56,7 @@ const Title = styled.div`
   font-size: 18px;
   line-height: 40px;
   font-family: 'Montserrat';
+  margin-bottom: 10px;
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 
   @media (min-width: ${mobileWidth}) {
@@ -175,8 +176,9 @@ const Icons = styled.div`
 `;
 
 function WelcomePage(props) {
-  const [ designation, setDesignation ] = useState("Fullstack Engineer")
-  const designations = ["Fullstack Engineer", "Fullstack Engineer", "Fullstack Engineer", "Fullstack Engineer", "Fullstack Engineer"]
+  // const [ designation, setDesignation ] = useState("Fullstack Engineer")
+  const designation = useRef()
+  const designations = ["Fullstack Engineer", "Backend Developer", "Sr. Software Engineer", "Frontend Developer", "System Engineer", "Javascript developer"]
   const ICONS_CONTAINER_WIDTH = 500;
 
 
@@ -190,31 +192,18 @@ function WelcomePage(props) {
     }
     return result;
   }
-
-  // const getTransitionString = (labels, idx) => {
-  //   const from = labels[idx % labels.length];
-  //   const to = labels[(idx + 1) % labels.length];
-  //   const min = Math.min(from.length, to.length);
-  //   const max = Math.max(from.length, to.length);
-  //   const length = min + parseInt(Math.random() * (max - min));
-  //   return getRandomString(10);
-  // }
   
   useEffect(() => {
     let j = 0;
     const interval = setInterval(() => {
       const len = 20;
-      Array.from({length:len}).forEach((_, i) => {
+      for(let i=0; i<len; i++) {
         setTimeout(() => {
-          const str =
-            i === len - 1
-              ? designations[j % designations.length]
-              : getRandomString(10);
-          setDesignation(str);
-        }, i * 20);
-      })
-      j++;
-    }, 1000);
+          designation.current.innerText = (i==len-1) ? designations[ j%designations.length ] : getRandomString(10)
+        }, i*len);
+      }
+      j++
+    }, 1500);
     return () => clearInterval(interval);
   });
 
@@ -227,7 +216,7 @@ function WelcomePage(props) {
             <Name>ROSHIN</Name>
             <Name>HANJAS</Name>
           </div>
-          <Title>{designation}</Title>
+          <Title ref={designation} />
           <Links>
           <a href="https://github.com/hanjas">{icons.github.icon}</a>
           <a href="https://hanjas.medium.com/">{icons.medium.icon}</a>
