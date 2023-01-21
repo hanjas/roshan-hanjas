@@ -177,8 +177,10 @@ const Icons = styled.div`
 
 function WelcomePage(props) {
   // const [ designation, setDesignation ] = useState("Fullstack Engineer")
-  const designation = useRef()
   const designations = ["Fullstack Engineer", "Backend Developer", "Sr. Software Engineer", "Frontend Developer", "System Engineer", "Javascript developer"]
+  const designation = useRef()
+  // designation.current.innerText = "System Engineer"
+  console.log(designation)
   const ICONS_CONTAINER_WIDTH = 500;
 
 
@@ -216,7 +218,7 @@ function WelcomePage(props) {
             <Name>ROSHIN</Name>
             <Name>HANJAS</Name>
           </div>
-          <Title ref={designation} />
+          <Title ref={designation}>{designations[designations.length-1]}</Title>
           <Links>
           <a href="https://github.com/hanjas">{icons.github.icon}</a>
           <a href="https://hanjas.medium.com/">{icons.medium.icon}</a>
