@@ -28,7 +28,7 @@
   to { height: 50%; }
 }
 @keyframes slide-in {
-  from { flex: 10; }
+  from { flex: 100%; }
   to { flex: 2; }
 }
 @keyframes appear {

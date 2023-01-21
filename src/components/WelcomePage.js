@@ -23,7 +23,7 @@ const LeftSection = styled.div`
   color: white;
 
   @media (min-width: ${mobileWidth}) {
-    flex: 2;
+    animation: slide-in 900ms .9s cubic-bezier(0.85, 0, 0.15, 1) both;
   }
 `;
 const LContent = styled.div`
@@ -31,13 +31,14 @@ const LContent = styled.div`
   flex-direction: column;
 `;
 const LProfile = styled.div`
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   background-image: url(${profilePic});
   background-size: cover;
   border-radius: 150px;
-  transform: scale(.8);
-  margin: 0 auto;
+  // transform: scale(.8);
+  margin: 20px auto;
+  animation: appear 300ms 1.7s both;
 
   @media (min-width: ${mobileWidth}) {
     display: none;
@@ -117,7 +118,7 @@ const IconsContainer = styled.div`
 `;
 
 const ClipContainer = styled.div`
-  animation: counter-rotate 50s infinite;
+  animation: counter-rotate 80s infinite;
   position: absolute;
   top: -50px;
   left: -50px;
@@ -133,7 +134,7 @@ const Clip = styled.div`
 const Border1 = styled.div`
   position: absolute;
   border-radius: 100%;
-  border: 5px dotted #eee;
+  border: 5px dotted #ededed;
   width: 800px;
   height: 800px;
   left: -275px;
@@ -143,7 +144,7 @@ const Border1 = styled.div`
 const Border2 = styled.div`
   position: absolute;
   border-radius: 100%;
-  border: 5px dotted #eee;
+  border: 5px dotted #ededed;
   width: 850px;
   height: 850px;
   left: -300px;
@@ -153,7 +154,7 @@ const Border2 = styled.div`
 const Border3 = styled.div`
   position: absolute;
   border-radius: 100%;
-  border: 5px dotted #eee;
+  border: 5px dotted #ededed;
   width: 900px;
   height: 900px;
   left: -325px;
@@ -206,7 +207,7 @@ function WelcomePage(props) {
         }, i*len);
       })
       j++
-    }, 1500);
+    }, 2000);
     return () => clearInterval(interval);
   });
 
