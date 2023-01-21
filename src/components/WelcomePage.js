@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components/macro'
 import icons from '../lib/utils/icons'
 import profilePic from '../public/profile-pic.svg';
@@ -197,11 +197,11 @@ function WelcomePage(props) {
     let j = 0;
     const interval = setInterval(() => {
       const len = 20;
-      for(let i=0; i<len; i++) {
-        setTimeout(() => {
-          designation.current.innerText = (i==len-1) ? designations[ j%designations.length ] : getRandomString(10)
+      Array.from({length: len}).forEach((_, i) => {
+        setTimeout((_) => {
+          designation.current.innerText = (i===len-1) ? designations[ j%designations.length ] : getRandomString(10)
         }, i*len);
-      }
+      })
       j++
     }, 1500);
     return () => clearInterval(interval);
