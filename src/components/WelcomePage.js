@@ -13,7 +13,8 @@ const Main = styled.div`
 
 const LeftSection = styled.div`
   height: 100vh;
-  background-image: linear-gradient(120deg, rgba(240, 147, 251, 1) 0%, rgba(245, 87, 108, 1) 100%);
+  // background-image: linear-gradient(120deg, rgba(240, 147, 251, 1) 0%, rgba(245, 87, 108, 1) 100%);
+  background-image: linear-gradient(120deg,rgb(57 89 255) 0%,rgb(60 196 79) 100%);
   width: 100%;
   display: flex;
   flex-direction: column;
